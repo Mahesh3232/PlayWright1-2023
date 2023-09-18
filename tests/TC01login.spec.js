@@ -9,6 +9,7 @@ test("Verify the login functionality with valid credentials",async ({page})=>{
     //tagname[attr=value]
     //input[id="One"]
     //step 3  enter password
+    
     await page.locator('input[name="password"]').fill('admin123')
     //step 4 click on login button 
     await page.locator('button[type="submit"]').click()
