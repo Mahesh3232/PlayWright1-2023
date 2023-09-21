@@ -27,5 +27,4 @@ test.only('Handling the radio Buttons with click method',async({page})=>{
     //await expect(page.locator('#vfb-7-1')).not.toBeChecked()
     await page.locator('#vfb-7-1').click()
     await expect(page.locator('#vfb-7-1')).toBeChecked()
-    await page.locator('#vfb-7-1').uncheck()
 })
