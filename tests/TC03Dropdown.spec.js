@@ -11,7 +11,7 @@ test('Verify the static dropdown',async({page})=>{
 })
 
 //dynyamic dropdown/Auto suggetion dropdown
-test.only('Verify the Dynyamic Dropdoen',async({page})=>{
+test('Verify the Dynyamic Dropdoen',async({page})=>{
     await page.goto('https://www.redbus.in/')
     await page.locator('#src').fill('Pune',{delay:1000})
     await page.waitForSelector('.placeHolderMainText')
@@ -26,5 +26,5 @@ test.only('Verify the Dynyamic Dropdoen',async({page})=>{
     }
     // let text = await page.locator('.placeHolderMainText').allTextContents()
     // console.log(text)
-    await page.pause()
+     await page.pause()
 })
