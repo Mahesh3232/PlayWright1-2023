@@ -7,7 +7,6 @@ test('Handling the radio Buttons',async({page})=>{
     await expect(page.locator('#vfb-7-1')).toBeChecked()
 })
 
-
 test('Handling the Checkbox',async({page})=>{
     await page.goto('https://demo.guru99.com/test/radio.html')
     await expect(page.locator('#vfb-6-1')).not.toBeChecked()
