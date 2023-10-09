@@ -18,7 +18,7 @@ test('Verify the Dynyamic Dropdoen',async({page})=>{
     const optionCount = await page.locator('.placeHolderMainText').count()
     console.log(optionCount)
     for(let i = 0 ;i < optionCount;i++){
-        let text = await page.locator('.placeHolderMainText').nth(i).textContent()
+        let text = await page.locator('.placeHolderMainText').nth(2).textContent()
         if(text === 'Nashik Phata'){
             await page.locator('.placeHolderMainText').nth(i).click()
             break
