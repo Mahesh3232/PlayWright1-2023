@@ -19,6 +19,7 @@ test.only('2nd way Verify DatePicker Using playwright', async ({ page }) => {
             break
         }
         await page.locator('[class="next"]').first().click()
+       
     }
     const dayCount = await page.locator('[class="day"]').count()
     //    await console.log(dayCount)

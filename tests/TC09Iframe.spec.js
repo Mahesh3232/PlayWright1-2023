@@ -10,7 +10,6 @@ test('Handling Iframe Using Playwright',async({page})=>{
 })
 
 //2nd way by .frame by name attribute
-
 test('2nd Way handling Iframe',async({page})=>{
     await page.goto('https://letcode.in/frame')
     const frame = await page.frame('firstFr')
@@ -19,8 +18,7 @@ test('2nd Way handling Iframe',async({page})=>{
     await page.waitForTimeout(2000)
 })
 
-//2nd way by .frame by URl 
-
+//2nd way by .frame by URL 
 test.only('2nd by URL Way handling Iframe',async({page})=>{
     await page.goto('https://letcode.in/frame')
     const frame = await page.frame({url:"https://letcode.in/frameUI"})
