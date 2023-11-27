@@ -5,19 +5,20 @@ test('Verify datepicker using playwright', async ({ page }) => {
     await page.locator('#datepicker').click()
     const date = new Date()
     //let day = date.getDate()
-    date.setDate(date.getDate() + 200)
+    date.setDate(date.getDate() + 216)
     //let month = date.toLocaleString('default', { month: 'short' })
     let day = date.getDate() //Cureent date
     let monthIndex = date.getMonth() //Index value of current month 
-    let month = date.toLocaleString('default', { month: 'long' }) //Curremt month in string
+    let month = date.toLocaleString('default', { month: 'long' }) //Current month in string
     let year = date.getFullYear() //Cureent year 
     //console.log(monthIndex)
     // console.log(month)
      console.log(day)
     // console.log(year)
+    const dayStr = `${day} ${month} ${year}`
     const my = `${month} ${year}`
-    console.log(my)
-
+    console.log(dayStr)
+    // console.log(my)
     while (true) {
         const currentMonthYear = await page.locator('[class="datepicker-switch"]').first().textContent()
         // console.log(currentMonthYear)
@@ -26,7 +27,8 @@ test('Verify datepicker using playwright', async ({ page }) => {
         }
         await page.locator('[class="next"]').first().click()
     }
-    const daycount = page.locator('[class="day"]').count()
+    const daycount = await page.locator('[class="day"]').count()
+    console.log(daycount)
     for (let i = 0; i < daycount; i++) {
         let text = await page.locator('[class="day"]').nth(i).textContent()
         console.log(text)
@@ -35,5 +37,5 @@ test('Verify datepicker using playwright', async ({ page }) => {
             break
         }
     }
-    await page.waitForTimeout(4000)
+    await page.waitForTimeout(5000)
 })
