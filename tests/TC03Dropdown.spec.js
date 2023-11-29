@@ -40,7 +40,7 @@ test.only('Verify the Dynyamic Dropdoen', async ({ page }) => {
         }
     }
     await page.pause()
-      page.waitForTimeout(4000)
+    page.waitForTimeout(4000)
 })
 
 
