@@ -23,7 +23,7 @@ test('Verify dynyamic dropdown', async ({ page }) => {
     console.log(destOptionCount)
     for(let i =0;i<destOptionCount;i++){
         let resultText = await page.locator('.placeHolderMainText').nth(i).textContent()
-        //console.log(resultText)//pune //Sangamvadi //shivajinager //nigdi
+        //console.log(resultText)
         if(resultText === 'Navi Mumbai'){
             await page.locator('.placeHolderMainText').nth(i).click()
             break
