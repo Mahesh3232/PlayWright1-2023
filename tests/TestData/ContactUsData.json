@@ -1,0 +1,20 @@
+[
+    {
+        "fstName": "Mahesh",
+        "lstName": "Aher",
+        "email": "mahesh@gmail.com",
+        "msg": "I am learning Playwright"
+    },
+    {
+        "fstName": "Rushi",
+        "lstName": "Ambare",
+        "email": "Rushi@gmail.com",
+        "msg": "I am learning JavaScript"
+    },
+    {
+        "fstName": "Darshan",
+        "lstName": "pund",
+        "email": "Darshan@gmail.com",
+        "msg": "I am learning Cypress"
+    }
+]
